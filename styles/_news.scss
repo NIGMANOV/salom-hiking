@@ -1,0 +1,247 @@
+@font-face {
+  font-family: "Gilroy";
+  src: url("../font/Gilroy-Regular.ttf") format("ttf"),
+    url("../font/Gilroy-Medium.ttf") format("ttf"),
+    url("../font/Gilroy-Light.ttf") format("ttf"),
+    url("../font/Gilroy-Heavy.ttf") format("ttf"),
+    url("../font/Gilroy-Bold.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "Gilroy", sans-serif;
+}
+
+.news {
+  margin-top: 75px;
+  text-align: center;
+  .news__paragraph {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #666f78;
+    .news__category {
+      color: #000000;
+    }
+  }
+
+  .news__title {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 72px;
+    color: #333333;
+    margin-top: 10px;
+  }
+}
+
+.cards {
+  .news-content {
+    display: flex;
+    gap: 24px;
+    margin-top: 33px;
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      justify-content: flex-end;
+      width: 684px;
+      height: 377px;
+      border: 1px solid #e6e6e6;
+      border-radius: 10px;
+      background-image: url(../img/1.jpeg);
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      .result {
+        padding-left: 24px;
+        padding-bottom: 21px;
+        .title {
+          max-width: 480px;
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 32px;
+          color: #ffffff;
+        }
+
+        .subTitle {
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 24px;
+          color: #ffffff;
+        }
+      }
+    }
+
+    .content1 {
+      width: 330px;
+      height: 376px;
+      border: 1px solid #e6e6e6;
+      border-radius: 10px;
+      &::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 208px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(../img/2.jpeg);
+      }
+
+      .content-wrap {
+        display: flex;
+        flex-direction: column;
+        padding: 16px 24px;
+
+        .content__title {
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 32px;
+          color: #000000;
+        }
+
+        .content__subtitle {
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 24px;
+          color: #666f78;
+        }
+      }
+    }
+  }
+}
+
+.show {
+  height: 48px;
+  background-color: #fafafb;
+  border-radius: 10px;
+  margin-top: 48px;
+  p {
+    padding: 15px 0;
+    text-align: center;
+    color: #666f78;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+}
+
+.kit1 {
+  display: flex;
+  gap: 12px;
+  margin-top: 40px;
+  justify-content: center;
+  align-items: center;
+  .kit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background-color: #fafafb;
+    border: none;
+    transition: 0.3s ease-in-out;
+    &:hover {
+      background-color: #bf5002;
+      color: white;
+    }
+  }
+}
+
+.footer {
+  background-color: #fafafb;
+  margin-top: 96px;
+  .footer-wrapper {
+    .footer-navigator {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 10px;
+
+      nav {
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 17px;
+          .title {
+            margin-top: 35px;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 24px;
+          }
+          li {
+            list-style: none;
+            a {
+              text-decoration: none;
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 24px;
+              color: #666f78;
+            }
+          }
+        }
+      }
+    }
+
+    .footer-line {
+      border: 1px solid gainsboro;
+      margin-top: 42px;
+    }
+
+    .social-network {
+      .social {
+        display: flex;
+        align-items: center;
+        margin-top: 33px;
+        p {
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 32px;
+          color: #bf5002;
+          margin-right: 53px;
+        }
+
+        .imgs {
+          display: flex;
+          gap: 35px;
+          a {
+            .social-icon {
+              fill: black;
+              transition: fill 0.3s ease-in-out;
+              &:hover,
+              &:focus {
+                fill: #bf5002;
+              }
+            }
+          }
+        }
+      }
+
+      .network {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .lit {
+          display: flex;
+          gap: 22px;
+          margin-top: 14px;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 24px;
+          color: #666f78;
+        }
+        .mig {
+          display: flex;
+          align-items: center;
+          gap: 11px;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 24px;
+          color: #666f78;
+        }
+      }
+    }
+  }
+}
