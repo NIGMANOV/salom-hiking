@@ -1,38 +1,38 @@
-@font-face {
-  font-family: "Gilroy";
-  src: url("../font/Gilroy-Regular.ttf") format("ttf"),
-    url("../font/Gilroy-Medium.ttf") format("ttf"),
-    url("../font/Gilroy-Light.ttf") format("ttf"),
-    url("../font/Gilroy-Heavy.ttf") format("ttf"),
-    url("../font/Gilroy-Bold.ttf") format("ttf");
-  font-weight: normal;
-  font-style: normal;
-}
-
-body {
-  font-family: "Gilroy", sans-serif;
-}
-
-.news {
+.breadcrumbs {
   margin-top: 75px;
-  text-align: center;
-  .news__paragraph {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 16px;
-    color: #666f78;
-    .news__category {
+  .breadcrumbs__list {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    .breadcrumbs__item {
+      list-style-type: none;
+      .breadcrumbs__link {
+        text-decoration: none;
+        font-size: 14px;
+        font-family: "Gilroy-Regular";
+        line-height: 16px;
+        color: #666f78;
+      }
+      .breadcrumbs__current {
+        font-size: 14px;
+        font-family: "Gilroy-Regular";
+        line-height: 16px;
+      }
+    }
+
+    .breadcrumbs__item.active {
       color: #000000;
     }
   }
+}
 
-  .news__title {
-    font-size: 64px;
-    font-weight: 700;
-    line-height: 72px;
-    color: #333333;
-    margin-top: 10px;
-  }
+.page-title {
+  text-align: center;
+  font-size: 64px;
+  font-family: "Gilroy-Bold";
+  line-height: 72px;
+  color: #333333;
+  margin-top: 10px;
 }
 
 .cards {
@@ -59,14 +59,14 @@ body {
         .title {
           max-width: 480px;
           font-size: 24px;
-          font-weight: 700;
+          font-family: "Gilroy-Bold";
           line-height: 32px;
           color: #ffffff;
         }
 
         .subTitle {
           font-size: 14px;
-          font-weight: 400;
+          font-family: "Gilroy-Regular";
           line-height: 24px;
           color: #ffffff;
         }
@@ -97,14 +97,14 @@ body {
 
         .content__title {
           font-size: 18px;
-          font-weight: 700;
+          font-family: "Gilroy-Bold";
           line-height: 32px;
           color: #000000;
         }
 
         .content__subtitle {
           font-size: 14px;
-          font-weight: 400;
+          font-family: "Gilroy-Medium";
           line-height: 24px;
           color: #666f78;
         }
@@ -114,17 +114,21 @@ body {
 }
 
 .show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 48px;
   background-color: #fafafb;
   border-radius: 10px;
   margin-top: 48px;
-  p {
-    padding: 15px 0;
-    text-align: center;
+  .button__show {
     color: #666f78;
     font-size: 16px;
-    font-weight: 500;
+    font-family: "Gilroy-Medium";
     line-height: 24px;
+    border: none;
+    background: none;
+    cursor: pointer;
   }
 }
 
@@ -143,10 +147,15 @@ body {
     border-radius: 10px;
     background-color: #fafafb;
     border: none;
-    transition: 0.3s ease-in-out;
-    &:hover {
+    color: #666f78;
+    stroke: #666f78;
+    font-family: "Gilroy-Medium";
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    &.active {
       background-color: #bf5002;
       color: white;
+      stroke: white;
     }
   }
 }
@@ -159,7 +168,6 @@ body {
       display: flex;
       justify-content: space-between;
       padding-top: 10px;
-
       nav {
         ul {
           display: flex;
@@ -170,13 +178,14 @@ body {
             font-size: 18px;
             font-weight: 600;
             line-height: 24px;
+            font-family: "Gilroy-Medium";
           }
           li {
             list-style: none;
             a {
               text-decoration: none;
               font-size: 16px;
-              font-weight: 400;
+              font-family: "Gilroy-Regular";
               line-height: 24px;
               color: #666f78;
             }
@@ -197,7 +206,7 @@ body {
         margin-top: 33px;
         p {
           font-size: 24px;
-          font-weight: 700;
+          font-family: "Gilroy-Bold";
           line-height: 32px;
           color: #bf5002;
           margin-right: 53px;
@@ -228,7 +237,7 @@ body {
           gap: 22px;
           margin-top: 14px;
           font-size: 14px;
-          font-weight: 400;
+          font-family: "Gilroy-Regular";
           line-height: 24px;
           color: #666f78;
         }
@@ -237,7 +246,7 @@ body {
           align-items: center;
           gap: 11px;
           font-size: 14px;
-          font-weight: 400;
+          font-family: "Gilroy-Regular";
           line-height: 24px;
           color: #666f78;
         }

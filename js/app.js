@@ -10,6 +10,3 @@ imagePaths.forEach((imagePath) => {
   console.log(imagePath); // Путь к картинке после обработки Webpack
 });
 
-
-console.log('Hello webPack');
-console.log('Hello webPack 2');

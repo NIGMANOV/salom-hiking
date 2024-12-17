@@ -15,14 +15,16 @@
     <main class="main">
       <div class="container">
         <div class="main-wrapper">
-          <div class="news">
-            <p class="news__paragraph">
-              О кемпинге
-              <span class="news__line">-</span>
-              <span class="news__category">Новости</span>
-            </p>
-            <p class="news__title">Новости</p>
-          </div>
+          
+          <nav class="breadcrumbs" aria-label="breadcrumb">
+            <ul class="breadcrumbs__list">
+              <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">О кемпинге</a></li>
+              <span>-</span>
+              <li class="breadcrumbs__item active"><span class="breadcrumbs__current" aria-current="page">Новости</span></li>
+            </ul>
+          </nav>
+
+          <p class="page-title">Новости</p>
 
             <div class="cards">
                 <div class="news-content">
@@ -124,26 +126,26 @@
             </div>
 
           <div class="show">
-            <p>Показать еще</p>
+            <button class="button__show">Показать еще</button>
           </div>
 
           <div class="kit1">
-            <button class="kit">
-              <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M7.5459 1L1.4545 7.09118L7.5459 13" stroke="#666F78" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>   
+            <button class="kit button">
+              <svg class="social-icon button" viewBox="0 0 9 14" width="9" height="14">
+                <use href="./img/icons/sprite.svg#array-left" x="0" y="0"></use>
+            </svg>
             </button>
-            <button class="kit">1</button>
+            <button class="kit active">1</button>
             <button class="kit">2</button>
             <button class="kit">3</button>
             <span>...</span>
             <button class="kit">97</button>
             <button class="kit">98</button>
             <button class="kit">99</button>
-            <button class="kit">
-              <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1.4541 1L7.5455 7.09118L1.4541 13" stroke="#666F78" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+            <button class="kit button">
+              <svg class="social-icon" viewBox="0 0 9 14" width="9" height="14">
+                <use href="./img/icons/sprite.svg#array-right" x="0" y="0"></use>
+            </svg>
             </button>
           </div>
         </div>
