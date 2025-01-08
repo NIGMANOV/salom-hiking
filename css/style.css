@@ -1,31 +1,31 @@
 @font-face {
-  font-family: "Gilroy-Regular";
+  font-family: "Gilroy";
   src: url("../font/Gilroy-Regular.ttf") format("truetype");
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: "Gilroy-Medium";
+  font-family: "Gilroy";
   src: url("../font/Gilroy-Medium.ttf") format("truetype");
-  font-weight: normal;
+  font-weight: 500;
   font-style: normal;
 }
 @font-face {
-  font-family: "Gilroy-Light";
+  font-family: "Gilroy";
   src: url("../font/Gilroy-Light.ttf") format("truetype");
-  font-weight: normal;
+  font-weight: 300;
   font-style: normal;
 }
 @font-face {
-  font-family: "Gilroy-Heavy";
+  font-family: "Gilroy";
   src: url("../font/Gilroy-Heavy.ttf") format("truetype");
-  font-weight: normal;
+  font-weight: 900;
   font-style: normal;
 }
 @font-face {
-  font-family: "Gilroy-Bold";
+  font-family: "Gilroy";
   src: url("../font/Gilroy-Bold.ttf") format("truetype");
-  font-weight: normal;
+  font-weight: 700;
   font-style: normal;
 }
 .breadcrumbs {
@@ -33,7 +33,7 @@
 }
 .breadcrumbs-list {
   display: flex;
-  gap: 8px;
+  gap: 24px;
   justify-content: center;
 }
 .breadcrumbs-list__item {
@@ -49,17 +49,19 @@
   border-radius: 8px;
   left: -8px;
   bottom: 40%;
-  transform: translate(0, 40%);
+  transform: translate(-8px, 40%);
 }
 .breadcrumbs-list__current {
   font-size: 14px;
-  font-family: "Gilroy-Regular";
+  font-family: "Gilroy";
+  font-weight: 400;
   line-height: 16px;
 }
 .breadcrumbs-list__link {
   text-decoration: none;
   font-size: 14px;
-  font-family: "Gilroy-Regular";
+  font-family: "Gilroy";
+  font-weight: 400;
   line-height: 16px;
   color: #666f78;
 }
@@ -68,9 +70,10 @@
 }
 
 .page-title {
+  font-family: "Gilroy";
+  font-weight: 700;
   text-align: center;
   font-size: 64px;
-  font-family: "Gilroy-Bold";
   line-height: 72px;
   color: #333333;
   margin-top: 10px;
@@ -91,24 +94,29 @@
   height: 376px;
   border: 1px solid #e6e6e6;
   border-radius: 10px;
+  position: relative;
 }
 .cards .news-list__item .news-list__image {
   width: 100%;
 }
-.cards .news-list__item a {
-  text-decoration: none;
+.cards .news-list .new-list__link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 .cards .news-list .news-list__item--active {
-  position: relative;
   width: 684px;
-  height: 377px;
+  position: relative;
   background: linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0.81) 29.52%, rgba(0, 0, 0, 0) 52.13%);
 }
 .cards .news-list .news-list__title--active {
   position: absolute;
   left: 0;
   bottom: 55px;
-  font-family: "Gilroy-Bold";
+  font-family: "Gilroy";
+  font-weight: 700;
   font-size: 24px;
   line-height: 32px;
   max-width: 470px;
@@ -121,7 +129,8 @@
   bottom: 21px;
 }
 .cards .news-list__title {
-  font-family: "Gilroy-Bold";
+  font-family: "Gilroy";
+  font-weight: 700;
   font-size: 18px;
   line-height: 32px;
   max-width: 282px;
@@ -130,7 +139,8 @@
   color: #000000;
 }
 .cards .news-list__date {
-  font-family: "Gilroy-Regular";
+  font-family: "Gilroy";
+  font-weight: 400;
   font-size: 14px;
   line-height: 24px;
   margin-left: 24px;
@@ -150,21 +160,29 @@
 .show .button__show {
   color: #666f78;
   font-size: 16px;
-  font-family: "Gilroy-Medium";
+  font-family: "Gilroy";
+  font-weight: 500;
   line-height: 24px;
   border: none;
   background: none;
   cursor: pointer;
 }
 
-.kit1 {
+.pagination {
   display: flex;
   gap: 12px;
   margin-top: 40px;
   justify-content: center;
   align-items: center;
 }
-.kit1 .kit {
+.pagination-list {
+  display: flex;
+  gap: 12px;
+}
+.pagination-list .pagination-list__item {
+  list-style-type: none;
+}
+.pagination-list .pagination-list__item .pagination-list__button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -175,11 +193,17 @@
   border: none;
   color: #666f78;
   stroke: #666f78;
-  font-family: "Gilroy-Medium";
+  font-family: "Gilroy";
+  font-weight: 500;
   cursor: pointer;
   transition: 0.5s ease-in-out;
 }
-.kit1 .kit.active {
+.pagination-list .pagination-list__item .pagination-list__button--active {
+  background-color: #bf5002;
+  color: white;
+  stroke: white;
+}
+.pagination-list .pagination-list__item .pagination-list__button:hover {
   background-color: #bf5002;
   color: white;
   stroke: white;
@@ -202,9 +226,9 @@
 .footer .footer-wrapper .footer-navigator nav ul .title {
   margin-top: 35px;
   font-size: 18px;
-  font-weight: 600;
   line-height: 24px;
-  font-family: "Gilroy-Medium";
+  font-family: "Gilroy";
+  font-weight: 500;
 }
 .footer .footer-wrapper .footer-navigator nav ul li {
   list-style: none;
@@ -212,7 +236,8 @@
 .footer .footer-wrapper .footer-navigator nav ul li a {
   text-decoration: none;
   font-size: 16px;
-  font-family: "Gilroy-Regular";
+  font-family: "Gilroy";
+  font-weight: 400;
   line-height: 24px;
   color: #666f78;
 }
@@ -227,20 +252,22 @@
 }
 .footer .footer-wrapper .social-network .social p {
   font-size: 24px;
-  font-family: "Gilroy-Bold";
+  font-family: "Gilroy";
+  font-weight: 700;
   line-height: 32px;
   color: #bf5002;
   margin-right: 53px;
 }
-.footer .footer-wrapper .social-network .social .imgs {
+.footer .footer-wrapper .social-network .social .svg-icons {
   display: flex;
+  align-items: center;
   gap: 35px;
 }
-.footer .footer-wrapper .social-network .social .imgs a .social-icon {
+.footer .footer-wrapper .social-network .social .svg-icons a .social-icon {
   fill: black;
   transition: fill 0.3s ease-in-out;
 }
-.footer .footer-wrapper .social-network .social .imgs a .social-icon:hover, .footer .footer-wrapper .social-network .social .imgs a .social-icon:focus {
+.footer .footer-wrapper .social-network .social .svg-icons a .social-icon:hover, .footer .footer-wrapper .social-network .social .svg-icons a .social-icon:focus {
   fill: #bf5002;
 }
 .footer .footer-wrapper .social-network .network {
@@ -248,23 +275,397 @@
   align-items: center;
   justify-content: space-between;
 }
-.footer .footer-wrapper .social-network .network .lit {
+.footer .footer-wrapper .social-network .network .network-list {
   display: flex;
   gap: 22px;
   margin-top: 14px;
+}
+.footer .footer-wrapper .social-network .network .network-list__link {
+  text-decoration: none;
   font-size: 14px;
-  font-family: "Gilroy-Regular";
+  font-family: "Gilroy";
+  font-weight: 400;
   line-height: 24px;
   color: #666f78;
 }
-.footer .footer-wrapper .social-network .network .mig {
+.footer .footer-wrapper .social-network .network .development-information {
   display: flex;
   align-items: center;
   gap: 11px;
   font-size: 14px;
-  font-family: "Gilroy-Regular";
+  font-family: "Gilroy";
+  font-weight: 400;
   line-height: 24px;
   color: #666f78;
+}
+
+.breadcrumbs-list-news-detail {
+  display: flex;
+  gap: 24px;
+  justify-content: left;
+}
+
+.page-title-news-detail {
+  width: 992px;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: -0.01em;
+  text-align: left;
+  margin-top: 24px;
+}
+
+.wrapper {
+  display: flex;
+  gap: 72px;
+}
+
+.left-side {
+  max-width: 992px;
+}
+.left-side .banner-shares {
+  width: 992px;
+  height: 562px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 45px;
+}
+.left-side .banner-shares__image {
+  width: 100%;
+}
+.left-side .page-subtitle {
+  width: 642px;
+  margin-top: 54px;
+  font-size: 24px;
+  line-height: 32px;
+  font-family: "Gilroy";
+  font-weight: 500;
+}
+.left-side .news-detail {
+  margin-top: 50px;
+}
+.left-side .news-detail .news-detail__title {
+  font-family: "Gilroy";
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 48px;
+  color: #333333;
+}
+.left-side .news-detail .news-detail__text {
+  font-family: "Gilroy";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+}
+.left-side .news-detail .news-detail-list .news-detail-list__item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+}
+.left-side .news-detail .news-detail-list .news-detail-list__item .news-detail-list__krug {
+  width: 8px;
+  height: 8px;
+  background-color: #bf5002;
+  border-radius: 100%;
+}
+.left-side .news-detail .news-detail-list .news-detail-list__item .news-detail__text {
+  font-family: "Gilroy";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+}
+.left-side .news-detail .news-detail__link {
+  font-family: "Gilroy";
+  margin-top: 11px;
+  text-decoration: none;
+  color: #bf5002;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+}
+.left-side .news-detail .news-detail-buttons {
+  display: flex;
+  gap: 16px;
+  margin-top: 30px;
+}
+.left-side .news-detail .news-detail-buttons .news-detail-buttons__btn {
+  padding: 8px 16px;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  border: 1px solid #bf5002;
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: "Gilroy";
+  font-weight: 600;
+  line-height: 24px;
+  color: #bf5002;
+  transition: 0.5s ease-in-out;
+}
+.left-side .news-detail .news-detail-buttons .news-detail-buttons__btn:hover {
+  background-color: #bf5002;
+  color: white;
+}
+.left-side .news-detail-social {
+  margin-top: 47px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.left-side .news-detail-social .social-icons {
+  display: flex;
+  gap: 16px;
+}
+.left-side .news-detail-social .social-icons .social-icons__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  background-color: #e6e6e6;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+.left-side .news-detail-social .social-icons .social-icons__item:hover {
+  background-color: #bf5002;
+}
+.left-side .news-detail-social .news-detail-date__text {
+  font-family: "Gilroy";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #666f78;
+}
+.left-side .margin-top {
+  margin-top: 21px;
+}
+.left-side .news-detail__span {
+  font-family: "Gilroy";
+  font-weight: 600;
+}
+.left-side .news-detail__span--active {
+  color: #bf5002;
+  font-family: "Gilroy";
+  font-weight: 600;
+}
+
+.right-side {
+  max-width: 398px;
+}
+.right-side .fix {
+  position: fixed;
+}
+.right-side .fix .element {
+  width: 328px;
+  height: 472px;
+  border-radius: 10px;
+  background-color: #fafafb;
+}
+.right-side .fix .element .kit1 {
+  margin-top: 42px;
+  margin-left: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+.right-side .fix .element .kit1 .lit {
+  margin-top: 42px;
+  width: 248px;
+  color: #333333;
+  font-family: "Gilroy";
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: -0.01em;
+  text-align: center;
+}
+.right-side .fix .element .kit1 .lit1 {
+  width: 248px;
+  font-family: "Gilroy";
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  text-align: center;
+}
+.right-side .fix .element .kit2 {
+  margin-top: 25px;
+}
+.right-side .fix .element .kit2 .lit2 {
+  font-family: "Gilroy";
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: -0.01em;
+  text-align: center;
+}
+.right-side .fix .element .kit2 .lit3 {
+  font-family: "Gilroy";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: #bf5002;
+}
+.right-side .fix .element .kit3 {
+  display: flex;
+  flex-direction: column;
+  margin-left: 40px;
+  margin-right: 40px;
+  gap: 15px;
+  margin-top: 22px;
+}
+.right-side .fix .element .kit3 .inputt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 248px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid #e6e6e6;
+  background-color: #ffffff;
+}
+.right-side .fix .element .kit3 .inputt input {
+  width: 80%;
+  height: 100%;
+  border: none;
+  background-color: none;
+  outline: none;
+  font-family: "Gilroy";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: -0.01em;
+  color: #666f78;
+}
+.right-side .fix .element .kit3 button {
+  width: 248px;
+  height: 40px;
+  border: none;
+  background-color: #bf5002;
+  border-radius: 10px;
+  font-family: "Gilroy";
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 24px;
+  color: #ffffff;
+  cursor: pointer;
+}
+.right-side .fix .element .kit3 p {
+  font-family: "Gilroy";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  color: #666f78;
+  text-align: center;
+}
+
+.submenu {
+  margin-top: 36px;
+}
+.submenu .submenu-list {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+.submenu .submenu-list__item {
+  padding: 8px 16px;
+  list-style-type: none;
+  font-family: "Gilroy";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+}
+.submenu .submenu-list__item--active {
+  border-radius: 10px;
+  background-color: rgba(191, 80, 2, 0.1019607843);
+  color: #bf5002;
+}
+.submenu .submenu-list__link {
+  text-decoration: none;
+  color: #333333;
+}
+
+.provider {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 66px;
+}
+.provider__item {
+  width: 448px;
+  height: 448px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+.provider__img {
+  width: 100%;
+  filter: brightness(80%);
+  transition: 0.5s ease-in-out;
+}
+.provider__title {
+  position: absolute;
+  font-family: "Gilroy";
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28.63px;
+  bottom: 26px;
+  left: 32px;
+  color: #ffffff;
+}
+.provider__link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+}
+.provider-category {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.provider-category__item {
+  width: 212px;
+  height: 212px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+.provider-category__item--active {
+  width: 448px;
+}
+.provider-category__item img {
+  width: 100%;
+}
+.provider-category__title {
+  position: absolute;
+  font-family: "Gilroy";
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28.63px;
+  bottom: 26px;
+  left: 24px;
+  color: #ffffff;
+}
+.provider-category__link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+}
+
+.services-banner {
+  margin-top: 64px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.services-banner__img {
+  width: 100%;
 }
 
 * {

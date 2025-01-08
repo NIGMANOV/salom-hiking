@@ -15,7 +15,6 @@
     <main class="main">
       <div class="container">
         <div class="main-wrapper">
-          
           <nav class="breadcrumbs" aria-label="breadcrumb">
             <ul class="breadcrumbs-list">
               <li class="breadcrumbs-list__item"><a href="#" class="breadcrumbs-list__link">О кемпинге</a></li>
@@ -100,25 +99,28 @@
             <button class="button__show">Показать еще</button>
           </div>
 
-          <div class="pagination">
-            <button class="pagination-list__item pagination-list__trigger">
-              <svg class="social-icon button" viewBox="0 0 9 14" width="9" height="14">
-                <use href="./img/icons/sprite.svg#array-left" x="0" y="0"></use>
-            </svg>
-            </button>
-            <button class="pagination-list__item pagination-list__item--active">1</button>
-            <button class="pagination-list__item">2</button>
-            <button class="pagination-list__item">3</button>
-            <span>...</span>
-            <button class="pagination-list__item">97</button>
-            <button class="pagination-list__item">98</button>
-            <button class="pagination-list__item">99</button>
-            <button class="pagination-list__item pagination-list__trigger">
-              <svg class="social-icon" viewBox="0 0 9 14" width="9" height="14">
-                <use href="./img/icons/sprite.svg#array-right" x="0" y="0"></use>
-            </svg>
-            </button>
-          </div>
+            <nav class="pagination">
+            <ul class="pagination-list">
+                <li class="pagination-list__item"><button class="pagination-list__button pagination-list__trigger">
+                    <svg class="social-icon button" viewBox="0 0 9 14" width="9" height="14">
+                      <use href="./img/icons/sprite.svg#array-left" x="0" y="0"></use>
+                  </svg>
+                  </button>
+                </li>
+
+                <li class="pagination-list__item">
+                <button class="pagination-list__button pagination-list__button--active">1</button></li>
+
+                <li class="pagination-list__item">
+                    <button class="pagination-list__button pagination-list__trigger">
+                    <svg class="social-icon" viewBox="0 0 9 14" width="9" height="14">
+                      <use href="./img/icons/sprite.svg#array-right" x="0" y="0"></use>
+                  </svg>
+                  </button>
+                </li>
+            </ul>
+            </nav>
+
         </div>
       </div>
     </main>
@@ -270,7 +272,6 @@
                         </div>
                     </div>
                 </div>
-
             </br>
         </div>
     </footer>

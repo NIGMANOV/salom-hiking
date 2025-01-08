@@ -8,6 +8,13 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     filename: "index.js",
   },
+  devServer: {
+    static: {
+      directory: path.join(__dirname, "dist"),
+    },
+    compress: true,
+    port: 4000,
+  },
   module: {
     rules: [
       {
@@ -32,12 +39,21 @@ module.exports = {
           filename: 'fonts/[name][hash][ext]',
         },
       },
+      
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: "./news.html",
       filename: "news.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./news-detail.html",  
+      filename: "news-detail.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./services.html",  
+      filename: "services.html",
     }),
   ],
 };
